@@ -1,0 +1,36 @@
+@import 'sidebar.module.scss';
+
+header.header {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background: lightskyblue;
+    box-shadow: 0 1px 3px #00000080;
+    padding: 1rem $header-v-padding;
+
+    margin-left: $sb-width;
+    width: calc(100% - $sb-width);
+    height: $header-height;
+    transition: margin-left $transition;
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin-left: $sb-collapsed-width;
+        width: calc(100% - $sb-collapsed-width);
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #fff;
+        text-shadow: 0 0 5px #00000020, 0 0 1px #000000;
+    }
+
+    div[class^=sidebar]:hover + & {
+        margin-left: $sb-width;
+    }
+}
