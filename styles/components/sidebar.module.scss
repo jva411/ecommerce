@@ -12,6 +12,10 @@ $transition: 0.3s ease-out;
     background: orange;
     transition: width $transition;
 
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+
     @media screen and (max-width: $breakpoint-md) {
         width: $sb-collapsed-width;
 
